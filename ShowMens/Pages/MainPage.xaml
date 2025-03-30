@@ -1,0 +1,31 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:ShowMens.ViewModels"
+             x:Class="ShowMens.Pages.MainPage">
+    
+
+
+    <ContentPage.BackgroundImageSource>
+       
+        <FileImageSource File="arnold.jpg"/>
+    </ContentPage.BackgroundImageSource>
+
+    <VerticalStackLayout VerticalOptions="Center" Spacing="20">
+        <Label Text="¡Bienvenido!"
+               FontSize="28"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center"
+               Padding="10"/>
+
+        <Button Text="Ver lista de hombres"
+               Command="{Binding NextCommand}"
+                BackgroundColor="#3498db"
+                TextColor="White"
+                FontSize="18"
+                CornerRadius="20"
+                Padding="10,5"
+                WidthRequest="200"
+                HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

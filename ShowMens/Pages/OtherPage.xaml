@@ -1,0 +1,31 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShowMens.Pages.OtherPage">
+    
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="10">
+            <Label Text="Lista de Hombres" 
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            
+            <ListView x:Name="UsersListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Border Stroke="Gray" StrokeThickness="2" Padding="10" Margin="5" BackgroundColor="White" HeightRequest="150" 
+                            StrokeShape="RoundRectangle 10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding FullName}" FontSize="18" FontAttributes="Bold"/>
+                            <Label Text="{Binding Age, StringFormat='Edad: {0}'}"/>
+                            <Label Text="{Binding Email}"/>
+                            <Label Text="{Binding Gender, StringFormat='Género: {0}'}"/>
+                        </VerticalStackLayout>
+                    </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
